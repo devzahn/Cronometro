@@ -14,17 +14,26 @@
 <body>
     <div id="container">
         <div class="time">
-            <div class="time" id="hour">00</div>
-            <span class="timeHour" id="textTime">Hour</span>
-            <div class="separator">:</div>
-            <div class="time" id="minute">00</div>
-            <div class="timeMinute" id="textTime">Minute</div>
-            <div class="separator">:</div>
-            <div class="time" id="second">00</div>
-            <div class="timeSecond" id="textTime">second</div>
-            <div class="separator">:</div>
-            <div class="time" id="milliseconds">000</div>
-            <div class="timemilliseconds" id="textTime">Milliseconds</div>
+            <div class="hour" id="timeSpan">
+                    <span class="time" id="hour">00</span>
+                    <span class="timeHour" id="textTime">Hour</span>
+            </div>
+                <div class="separator">:</div>
+            <div class="minute" id="timeSpan">
+                <span class="time" id="minute">00</span>
+                <span class="timeMinute" id="textTime">Minute</span>
+            </div>    
+                
+                <div class="separator">:</div>
+            <div class="second" id="timeSpan">
+                <span class="time" id="second">00</span>
+                <span class="timeSecond" id="textTime">Second</span>
+            </div>
+                <div class="separator">:</div>
+            <div class="milliseconds" id="timeSpan">
+                <span class="time" id="milliseconds">000</span>
+                <span class="timeMilliseconds" id="textTime">Milliseconds</span>
+            </div>
         </div>
         <div class="button">
             <button class="btn" id="startBtn">Start</button>
