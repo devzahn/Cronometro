@@ -4,7 +4,7 @@ const secondEl = document.querySelector('#second')
 const millisecondsEl = document.querySelector('#milliseconds')
 const startBtn = document.querySelector('#startBtn')
 const resumeBtn = document.querySelector('#resumeBtn')
-const pouseBtn = document.querySelector('#pouseBtn')
+const pauseBtn = document.querySelector('#pauseBtn')
 const resetBtn = document.querySelector('#resetBtn')
 
 let interval;
@@ -14,8 +14,10 @@ let seconds = 0;
 let milliseconds = 0;
 let isPaused = false;
 
-startBtn.addEventListener('click', startTimer);
-pouseBtn.addEventListener('click', pouseTimer);
+startBtn.addEventListener(`click`, startTimer);
+pauseBtn.addEventListener(`click`, pauseTimer);
+resumeBtn.addEventListener(`click`, resumeTimer)
+resetBtn.addEventListener(`click`, resetTimer)
 
 function startTimer() {
 
@@ -51,8 +53,34 @@ function startTimer() {
 
 }
 
-function pouseTimer () {
-    isPaused = true;
+function pauseTimer () {
+    if(isPaused === true) {
+        isPaused = false
+   }
+   else{
+       isPaused = true
+   }
+}
+function resumeTimer() {
+    if(isPaused === false) {
+        isPaused = true
+    }
+    else{
+        isPaused = false
+    }
+}
+
+function resetTimer(){
+    clearInterval(interval)
+    hour = 0;
+    minutes = 0;
+    seconds = 0;
+    milliseconds = 0;
+
+    hourEl.textContent = `00`
+    minuteEl.textContent = `00`
+    secondEl.textContent = `00`
+    millisecondsEl.textContent = `000`
 }
 
 function formaTime(time) {
