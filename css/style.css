@@ -7,7 +7,7 @@
     font-family: 'Roboto Mono', monospace;
 }
 body {
-    background-image: url("/assets/SL_0210121_40570_75.jpg");
+    background-image: url("assets/SL_0210121_40570_75.jpg");
     height: 100vh;
     display: flex;
     align-items: center;
